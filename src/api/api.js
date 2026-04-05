@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getToken, isAuthed } from '../store/authStore';
 
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_URL
+    baseURL: process.env.REACT_APP_API_BASE
 })
 
 // Pour ajouter automatiquement le token dans les requête
@@ -19,6 +19,9 @@ export const login = (username, password) =>
  
 export const logout = () =>
   api.post('/auth/logout/');
+
+export const register = (data) =>
+  api.post('/auth/register/', data);
 
 export default api;
 
