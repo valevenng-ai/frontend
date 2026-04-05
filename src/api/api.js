@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getToken, isAuthed } from '../store/authStore';
 
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_BASE
+    baseURL: process.env.REACT_APP_API_URL
 })
 
 // Pour ajouter automatiquement le token dans les requête
