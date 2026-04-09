@@ -2,12 +2,13 @@ import React from 'react';
 
 function EventCard({ event, onEdit, onDelete, onClick, admin }) {
 
-  const formatDate = (dateStr) =>
-    new Date(dateStr + 'Z').toLocaleDateString('fr-FR', {
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric',
-    });
+  const formatDate = (dateStr) => {
+  return new Date(dateStr + 'Z').toLocaleDateString('fr-FR', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  });
+};
 
   const getStatusLabel = (status) => ({
     active: 'Actif',
