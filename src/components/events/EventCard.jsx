@@ -3,7 +3,8 @@ import React from 'react';
 function EventCard({ event, onEdit, onDelete, onClick, admin }) {
 
   const formatDate = (dateStr) => {
-  return new Date(dateStr + 'Z').toLocaleDateString('fr-FR', {
+  return new Date(dateStr).toLocaleDateString('fr-FR', {
+    timeZone: 'Europe/Paris',
     day: '2-digit',
     month: 'short',
     year: 'numeric',
